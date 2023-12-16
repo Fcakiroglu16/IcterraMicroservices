@@ -7,11 +7,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Producer.App", "Producer.Ap
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Consumer.App", "Consumer.App\Consumer.App.csproj", "{CA06C300-FD08-49E6-8719-2A894F456A7D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkerService1", "WorkerService1\WorkerService1.csproj", "{4770A7BB-82F2-4B41-9081-439248FE998D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkerService1", "WorkerService1\WorkerService1.csproj", "{4770A7BB-82F2-4B41-9081-439248FE998D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order.API", "Order.API\Order.API.csproj", "{200E148D-55E5-4904-B4C3-8650170B8D10}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Order.API", "Order.API\Order.API.csproj", "{200E148D-55E5-4904-B4C3-8650170B8D10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stock.API", "Stock.API\Stock.API.csproj", "{19A6E9B1-F57B-47E4-954B-88C837B15F0E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stock.API", "Stock.API\Stock.API.csproj", "{19A6E9B1-F57B-47E4-954B-88C837B15F0E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shread", "Shread\Shread.csproj", "{D77650A4-30CF-4231-AC9E-0A0557083220}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Docker.App", "Docker.App\Docker.App.csproj", "{77F3FEE6-7BC5-40E9-A36E-232A6AA0285F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{19A6E9B1-F57B-47E4-954B-88C837B15F0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19A6E9B1-F57B-47E4-954B-88C837B15F0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19A6E9B1-F57B-47E4-954B-88C837B15F0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D77650A4-30CF-4231-AC9E-0A0557083220}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D77650A4-30CF-4231-AC9E-0A0557083220}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D77650A4-30CF-4231-AC9E-0A0557083220}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D77650A4-30CF-4231-AC9E-0A0557083220}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77F3FEE6-7BC5-40E9-A36E-232A6AA0285F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77F3FEE6-7BC5-40E9-A36E-232A6AA0285F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77F3FEE6-7BC5-40E9-A36E-232A6AA0285F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77F3FEE6-7BC5-40E9-A36E-232A6AA0285F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
