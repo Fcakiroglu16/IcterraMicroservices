@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  docker1.app:
+    ports:
+     - 5100:8080 
+   
+  docker2.app:
+   ports:
+    - 5150:8080 
+    
+

@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  docker1.app:
+    image: docker1-image:v2
+    build:
+      context: .
+      dockerfile: Docker.App/Dockerfile
+  docker2.app:
+    image: docker2-image:v2
+    build:
+      context: .
+      dockerfile: Docker2.App/Dockerfile 
+  sqlserver.db:
+    image: mcr.microsoft.com/mssql/server:2022-preview-ubuntu-22.04

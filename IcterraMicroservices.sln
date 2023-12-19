@@ -15,7 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stock.API", "Stock.API\Stoc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shread", "Shread\Shread.csproj", "{D77650A4-30CF-4231-AC9E-0A0557083220}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Docker.App", "Docker.App\Docker.App.csproj", "{77F3FEE6-7BC5-40E9-A36E-232A6AA0285F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Docker.App", "Docker.App\Docker.App.csproj", "{77F3FEE6-7BC5-40E9-A36E-232A6AA0285F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Docker2.App", "Docker2.App\Docker2.App.csproj", "{4AFB0FE8-06DC-40B6-9F3F-2C6EF619326D}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{BB838310-617C-464E-87C0-56BE6CDF5FEF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +55,14 @@ Global
 		{77F3FEE6-7BC5-40E9-A36E-232A6AA0285F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77F3FEE6-7BC5-40E9-A36E-232A6AA0285F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77F3FEE6-7BC5-40E9-A36E-232A6AA0285F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AFB0FE8-06DC-40B6-9F3F-2C6EF619326D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AFB0FE8-06DC-40B6-9F3F-2C6EF619326D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AFB0FE8-06DC-40B6-9F3F-2C6EF619326D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AFB0FE8-06DC-40B6-9F3F-2C6EF619326D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB838310-617C-464E-87C0-56BE6CDF5FEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB838310-617C-464E-87C0-56BE6CDF5FEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB838310-617C-464E-87C0-56BE6CDF5FEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB838310-617C-464E-87C0-56BE6CDF5FEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

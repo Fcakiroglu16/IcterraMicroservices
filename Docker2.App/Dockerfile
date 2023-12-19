@@ -8,18 +8,17 @@ EXPOSE 8080
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["Docker.App/Docker.App.csproj", "Docker.App/"]
-RUN dotnet restore "./Docker.App/./Docker.App.csproj"
+COPY ["Docker2.App/Docker2.App.csproj", "Docker2.App/"]
+RUN dotnet restore "./Docker2.App/./Docker2.App.csproj"
 COPY . .
-WORKDIR "/src/Docker.App"
-RUN dotnet build "./Docker.App.csproj" -c $BUILD_CONFIGURATION -o /app/build
-
+WORKDIR "/src/Docker2.App"
+RUN dotnet build "./Docker2.App.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./Docker.App.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "./Docker2.App.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "Docker.App.dll"]
+ENTRYPOINT ["dotnet", "Docker2.App.dll"]
