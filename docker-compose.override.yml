@@ -7,11 +7,16 @@ services:
      - 5001:8080
     environment:
      - Microservices:ProductsBaseUrl=http://docker2.app:8080
-   
+     - ConnectionStrings:SqlServer=Server=sqlserver.db,1433;Database=StockDb;User=Sa;Password=Password12*;Trusted_Connection=False;TrustServerCertificate=True;Integrated Security=False
+     - ConnectionStrings:RabbitMQ=rabbitmq
+    depends_on:
+      - sqlserver.db
   docker2.app:
    container_name: "docker2app-container"
    ports:
     - 5002:8080 
+   environment:
+    - ConnectionStrings:RabbitMQ=rabbitmq 
   sqlserver.db:
    user: root
    volumes:
@@ -22,6 +27,8 @@ services:
     - MSSQL_PID=Evaluation
    ports:
     - 1433:1433 
-
-
+  rabbitmq :
+   ports:
+    - 5672:5672
+    - 15672:15672
     

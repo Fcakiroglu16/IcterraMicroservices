@@ -1,4 +1,7 @@
+using Docker.App.Models;
 using Docker.App.Services;
+using MassTransit;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,10 +13,49 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddScoped<ProductService>();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddDbContext<AppDbContext>(options =>
+{
+
+    options.UseSqlServer(builder.Configuration.GetConnectionString("SqlServer"));
+});
+
+
 builder.Services.AddHttpClient<ProductService>(o =>
 {
     o.BaseAddress = new Uri(builder.Configuration.GetSection("Microservices")["ProductsBaseUrl"]!);
 });
+
+
+builder.Services.AddMassTransit(configure =>
+{
+
+
+    configure.UsingRabbitMq((context, configurator) =>
+    {
+
+        configurator.Host(builder.Configuration.GetConnectionString("RabbitMQ"), "/", host =>
+        {
+
+
+        });
+
+
+
+    });
+
+
+
+});
+
+
+
+
+
+
+
+
+
+
 
 
 var app = builder.Build();

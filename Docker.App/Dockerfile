@@ -9,11 +9,11 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["Docker.App/Docker.App.csproj", "Docker.App/"]
+COPY ["Shread/Shread.csproj", "Shread/"]
 RUN dotnet restore "./Docker.App/./Docker.App.csproj"
 COPY . .
 WORKDIR "/src/Docker.App"
 RUN dotnet build "./Docker.App.csproj" -c $BUILD_CONFIGURATION -o /app/build
-
 
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release

@@ -13,3 +13,8 @@ services:
       dockerfile: Docker2.App/Dockerfile 
   sqlserver.db:
     image: mcr.microsoft.com/mssql/server:2022-preview-ubuntu-22.04
+  rabbitmq:
+    image: rabbitmq:3.12.10-management
+
+
+    
