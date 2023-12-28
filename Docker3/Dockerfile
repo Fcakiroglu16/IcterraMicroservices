@@ -3,23 +3,23 @@
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 USER app
 WORKDIR /app
-EXPOSE 80
-EXPOSE 443
+EXPOSE 8080
+EXPOSE 8081
+
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["Docker.App/Docker.App.csproj", "Docker.App/"]
-COPY ["Shread/Shread.csproj", "Shread/"]
-RUN dotnet restore "./Docker.App/./Docker.App.csproj"
+COPY ["Docker3/Docker3.csproj", "Docker3/"]
+RUN dotnet restore "./Docker3/./Docker3.csproj"
 COPY . .
-WORKDIR "/src/Docker.App"
-RUN dotnet build "./Docker.App.csproj" -c $BUILD_CONFIGURATION -o /app/build
+WORKDIR "/src/Docker3"
+RUN dotnet build "./Docker3.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./Docker.App.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "./Docker3.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "Docker.App.dll"]
+ENTRYPOINT ["dotnet", "Docker3.dll"]

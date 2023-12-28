@@ -1,0 +1,6 @@
+@Docker3_HostAddress = http://localhost:5033
+
+GET {{Docker3_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

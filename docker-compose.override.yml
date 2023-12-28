@@ -4,13 +4,19 @@ services:
   docker1.app:
     container_name: "docker1app-container"
     ports:
-     - 5001:8080
+     - 5001:80
+     - 5010:443 
     environment:
+     - ASPNETCORE_URLS=https://+:443;http://+:80
      - Microservices:ProductsBaseUrl=http://docker2.app:8080
      - ConnectionStrings:SqlServer=Server=sqlserver.db,1433;Database=StockDb;User=Sa;Password=Password12*;Trusted_Connection=False;TrustServerCertificate=True;Integrated Security=False
      - ConnectionStrings:RabbitMQ=rabbitmq
+     - ASPNETCORE_Kestrel__Certificates__Default__Path=/Certificates/mycertificate.pfx
+     - ASPNETCORE_Kestrel__Certificates__Default__Password=Password12*
     depends_on:
       - sqlserver.db
+    volumes:
+     - C:/Certificates:/Certificates
   docker2.app:
    container_name: "docker2app-container"
    ports:

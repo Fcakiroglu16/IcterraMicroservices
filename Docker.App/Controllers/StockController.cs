@@ -6,7 +6,7 @@ using Shread;
 
 namespace Docker.App.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class StockController : ControllerBase
     {
@@ -17,6 +17,16 @@ namespace Docker.App.Controllers
             _context = context;
             _publishEndpoint = publishEndpoint;
         }
+
+
+
+        [HttpGet("{id}")]
+        public IActionResult GetStocks(int id)
+        {
+            return Ok(new { Id=id});
+        }
+
+
         [HttpPost]
         public IActionResult Save()
         {

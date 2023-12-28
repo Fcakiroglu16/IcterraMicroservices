@@ -1,0 +1,24 @@
+{
+  //https://localhost:5095/api/Stock/GetStocks/33
+  // https://localhost:6000/services/stock/GetStocks/2
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/Stock/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5095
+        }
+      ],
+      "UpstreamPathTemplate": "/services/stock/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "UpstreamScheme": "http"
+    }
+  ],
+
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:5280"
+  }
+}
+
