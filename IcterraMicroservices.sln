@@ -23,7 +23,11 @@ Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-co
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Docker3", "Docker3\Docker3.csproj", "{24027353-E740-49B5-952B-FA2D9457B842}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gateway.API", "Gateway\Gateway.API\Gateway.API.csproj", "{9BBCAB23-5BA4-4A8E-96F2-C7DD20750922}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gateway.API", "Gateway\Gateway.API\Gateway.API.csproj", "{9BBCAB23-5BA4-4A8E-96F2-C7DD20750922}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenTelemetryApp", "..\OpenTelemetryApp\OpenTelemetryApp.csproj", "{7F3AC06C-2F87-4EE4-828E-C92BA808C936}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTelemetryMicroservice.API", "..\OpenTelemetryMicroservice.API\OpenTelemetryMicroservice.API.csproj", "{9A4E5725-4427-4D68-A5B3-A62996364579}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +79,14 @@ Global
 		{9BBCAB23-5BA4-4A8E-96F2-C7DD20750922}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9BBCAB23-5BA4-4A8E-96F2-C7DD20750922}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9BBCAB23-5BA4-4A8E-96F2-C7DD20750922}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F3AC06C-2F87-4EE4-828E-C92BA808C936}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F3AC06C-2F87-4EE4-828E-C92BA808C936}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F3AC06C-2F87-4EE4-828E-C92BA808C936}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F3AC06C-2F87-4EE4-828E-C92BA808C936}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A4E5725-4427-4D68-A5B3-A62996364579}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A4E5725-4427-4D68-A5B3-A62996364579}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A4E5725-4427-4D68-A5B3-A62996364579}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A4E5725-4427-4D68-A5B3-A62996364579}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
